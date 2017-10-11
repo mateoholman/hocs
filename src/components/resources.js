@@ -1,7 +1,9 @@
 import React from 'react';
 
 export default () => {
-  <div>
-    <h1>Protected super secret stuff!</h1>
-  </div>;
+  return (
+    <div>
+      <h1>Super Secret Stuff!</h1>
+    </div>
+  );
 };

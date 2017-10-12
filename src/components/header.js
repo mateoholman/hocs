@@ -5,10 +5,14 @@ import * as actions from '../actions';
 
 class Header extends Component {
   authButton() {
-    if (this.state.authenticated){
-      return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>
+    if (this.props.authenticated) {
+      return (
+        <button onClick={() => this.props.authenticate(false)}>Sign Out</button>
+      );
     } else {
-      return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
+      return (
+        <button onClick={() => this.props.authenticate(true)}>Sign In</button>
+      );
     }
   }
   render() {
@@ -28,7 +32,7 @@ class Header extends Component {
   }
 }
 
-mapStateToProps(state){
+function mapStateToProps(state) {
   return { authenticated: state.authenticated };
 }
 
